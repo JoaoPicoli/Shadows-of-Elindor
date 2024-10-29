@@ -230,6 +230,9 @@ eleonora_dialogue = {
     ]
 }
 
-
-
-
+def get_random_dialogue(character_dialogues, day):
+    if day in character_dialogues:
+        dialogue = random.choice(character_dialogues[day])["line"]
+        return dialogue
+    else:
+        return "Dia não encontrado!"
